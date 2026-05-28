@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frances Decor is Colombo's premier luxury floral designer, crafting architectural destination weddings, majestic floral mandaps, opulent reception designs, and romantic editorial wedding decors.">
+  <meta name="keywords" content="wedding decor sri lanka, luxury florist colombo, destination wedding colombo, floral styling sri lanka, frances decor, luxury wedding mandap, reception decor colombo">
+  <meta name="author" content="Frances Decor">
+  
+  <title>Frances Decor | Luxury Floral Wedding & Destination Styling Colombo</title>
+  
+  <!-- Favicon placeholder -->
+  <link rel="icon" type="image/png" href="assets/gallery_bouquets.png">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Custom Interactive Mouse Glow Background -->
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="custom-cursor" aria-hidden="true"></div>
+
+  <!-- --------------------------------------------------
+       Header & Luxury Floating Navigation
+  -------------------------------------------------- -->
+  <header>
+    <div class="container">
+      <a href="#home" class="logo" aria-label="Frances Decor Home">
+        FRANCES DECOR
+        <span>Bespoke Floral Architecture</span>
+      </a>
+      
+      <!-- Desktop Navigation links -->
+      <nav>
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#testimonials" class="nav-link">Love Stories</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      
+      <!-- Nav Consultation CTA -->
+      <a href="#contact" class="nav-cta" style="display: none; min-width: 170px; text-align: center;">Book Consultation</a>
+      
+      <!-- Mobile hamburger trigger -->
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Navigation button visible for desktop only -->
+  <script>
+    // Handle inline display of header cta for wider viewports
+    if (window.innerWidth >= 1024) {
+      document.querySelector('.nav-cta').style.display = 'inline-block';
+    }
+  </script>
+
+  <!-- Mobile Navigation Menu Panel -->
+  <div class="mobile-menu">
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#gallery" class="nav-link">Gallery</a>
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#testimonials" class="nav-link">Love Stories</a>
+    <a href="#contact" class="nav-link">Contact</a>
+    <a href="#contact" class="nav-cta" style="margin-top: 1.5rem;">Book Consultation</a>
+  </div>
+
+  <!-- --------------------------------------------------
+       1. Hero Section (Cinematic Wedding Visual + Floating Petals)
+  -------------------------------------------------- -->
+  <section id="home" class="hero" style="padding: 0;">
+    <!-- Cinematic Visual Background container -->
+    <div class="hero-media">
+      <img src="assets/hero-bg.png" alt="Cinematic luxury wedding ceremony floral arch backdrop" class="hero-media-bg">
+    </div>
+    
+    <div class="hero-overlay" aria-hidden="true"></div>
+    
+    <!-- Canvas for Floating Flower Petals Engine -->
+    <div class="hero-canvas-container">
+      <canvas id="hero-petals-canvas"></canvas>
+    </div>
+    
+    <!-- Hero Heading Content -->
+    <div class="hero-content">
+      <span class="hero-tagline">Frances Decor Colombo</span>
+      <h1 class="hero-title">Creating Timeless Floral Wedding Experiences</h1>
+      
+      <div class="hero-buttons">
+        <a href="#gallery" class="btn-luxury btn-luxury-primary">Explore Weddings</a>
+        <a href="#contact" class="btn-luxury btn-luxury-secondary">Book Consultation</a>
+      </div>
+    </div>
+    
+    <!-- Scroll indicator -->
+    <div class="hero-scroll-indicator">
+      Scroll
+      <span></span>
+    </div>
+  </section>
+
+  <!-- --------------------------------------------------
+       2. About Frances Decor (Founder Portrait + Editorial Grid)
+  -------------------------------------------------- -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid">
+        
+        <!-- Left: Founder portrait with thin frame border -->
+        <div class="about-img-container">
+          <div class="about-img-frame">
+            <img src="assets/founder.png" alt="Frances, founder and principal designer of Frances Decor luxury wedding styling" class="about-img">
+          </div>
+          <!-- Fine floral line drawing overlay decoration -->
+          <svg class="about-floral-drawing svg-bg-decor" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+            <path d="M50 10 C60 30, 90 20, 50 60 C10 20, 40 30, 50 10" stroke-width="0.8"/>
+            <path d="M50 60 C55 70, 75 75, 50 90 C25 75, 45 70, 50 60" stroke-width="0.8"/>
+            <path d="M50 35 C65 40, 80 50, 50 70 C20 50, 35 40, 50 35" stroke-width="0.5"/>
+          </svg>
+        </div>
+        
+        <!-- Right: Text copy & Features highlights -->
+        <div class="about-content">
+          <span class="section-subtitle">The Artistic Vision</span>
+          <h2 class="section-title">Architectural Destination Floral Styling</h2>
+          
+          <p class="about-desc-serif">
+            "We believe in the understated power of romantic luxury—where each petal, light ray, and candle placement is choreographed to frame your personal legacy."
+          </p>
+          
+          <p class="about-desc-sans">
+            Frances Decor is Colombo's premier boutique floral design atelier. Specializing in architectural scale transformations and ultra-high-end destination weddings, we blend classical European romance with clean modern minimalism. Our creations are not mere decorations; they are immersive botanical landscapes built to capture deep emotional narratives.
+          </p>
+          
+          <!-- Staggered feature list -->
+          <div class="about-features">
+            <div class="feature-item">
+              <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+              <div class="feature-text">
+                <h4>Architectural Scale</h4>
+                <p>Voluminous, floating installations engineered to redefine structural venues.</p>
+              </div>
+            </div>
+            
+            <div class="feature-item">
+              <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h2a2.5 2.5 0 002.5-2.5V14m-12 5h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <div class="feature-text">
+                <h4>Destination Styling</h4>
+                <p>Flawless design executions across major luxury resorts globally.</p>
+              </div>
+            </div>
+            
+            <div class="feature-item">
+              <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+              </svg>
+              <div class="feature-text">
+                <h4>Minimalist Romance</h4>
+                <p>Curated floral densities focusing on high editorial elegance over clutter.</p>
+              </div>
+            </div>
+            
+            <div class="feature-item">
+              <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+              </svg>
+              <div class="feature-text">
+                <h4>Personalized Concepts</h4>
+                <p>Each design is uniquely sketched to coordinate with your individual journey.</p>
+              </div>
+            </div>
+          </div>
+          
+          <a href="#contact" class="btn-luxury btn-luxury-primary" style="background-color: var(--color-dark); color: white; border-color: var(--color-dark);">Curate Your Union</a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- --------------------------------------------------
+       2.5. Editorial Spotlight (Luxury 3D Carousel with Toggle)
+  -------------------------------------------------- -->
+  <section id="spotlight" class="spotlight">
+    <!-- Large elegant low-opacity background watermark -->
+    <div class="watermark-bg" aria-hidden="true">EDITORIAL</div>
+    
+    <div class="container">
+      
+      <!-- Section Headers -->
+      <div style="text-align: center; margin-bottom: 3.5rem; position: relative; z-index: 2;">
+        <span class="section-subtitle">Curated Masterpieces</span>
+        <h2 class="section-title">Signature Spotlights</h2>
+      </div>
+
+      <!-- Editorial Detail Viewer Panel (appears when clicking a carousel card) -->
+      <div class="editorial-detail-viewer" id="editorial-detail-viewer">
+        <button class="editorial-detail-close" aria-label="Close Detail View">&times;</button>
+        
+        <!-- Detail Viewer Navigation Arrows -->
+        <button class="editorial-nav-btn editorial-nav-prev" id="editorial-nav-prev" aria-label="Previous Image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        <button class="editorial-nav-btn editorial-nav-next" id="editorial-nav-next" aria-label="Next Image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+
+        <div class="editorial-detail-inner">
+          <!-- Left: Large Featured Image -->
+          <div class="editorial-detail-image-wrap">
+            <div class="editorial-detail-img-frame">
+              <img src="" alt="" class="editorial-detail-img" id="editorial-detail-img">
+            </div>
+            <!-- Image counter indicator -->
+            <div class="editorial-detail-counter" id="editorial-detail-counter"></div>
+          </div>
+          <!-- Right: Details & Description -->
+          <div class="editorial-detail-content">
+            <span class="editorial-detail-label">Selected Spotlight</span>
+            <h3 class="editorial-detail-title" id="editorial-detail-title"></h3>
+            <div class="editorial-detail-divider"></div>
+            <div class="editorial-detail-meta">
+              <div class="editorial-detail-meta-item">
+                <span class="editorial-meta-label">Location</span>
+                <span class="editorial-meta-value" id="editorial-detail-location"></span>
+              </div>
+              <div class="editorial-detail-meta-item">
+                <span class="editorial-meta-label">Category</span>
+                <span class="editorial-meta-value" id="editorial-detail-category"></span>
+              </div>
+            </div>
+            <p class="editorial-detail-desc" id="editorial-detail-desc"></p>
+            <a href="#contact" class="btn-luxury btn-editorial-inquiry">Inquire About This Design</a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- 3D Carousel Stage -->
+      <div class="carousel-3d-container">
+        
+        <!-- Prev Navigation Arrow -->
+        <button class="carousel-3d-btn prev" aria-label="Previous Spotlight">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+
+        <!-- 3D Card Items Container -->
+        <div class="carousel-3d-wrapper">
+          <div class="carousel-3d-card card-active" data-index="0">
+            <img src="assets/gallery_mandap.png" alt="Imperial Wisteria Canopy" class="carousel-3d-img">
+          </div>
+          <div class="carousel-3d-card card-right" data-index="1">
+            <img src="assets/gallery_destination.png" alt="Clifftop Rose Garden" class="carousel-3d-img">
+          </div>
+          <div class="carousel-3d-card card-far-right" data-index="2">
+            <img src="assets/gallery_reception.png" alt="Ballroom Symphony" class="carousel-3d-img">
+          </div>
+          <div class="carousel-3d-card card-far-left" data-index="3">
+            <img src="assets/hero-bg.png" alt="Romantic Garden Cathedral" class="carousel-3d-img">
+          </div>
+          <div class="carousel-3d-card card-left" data-index="4">
+            <img src="assets/gallery_bouquets.png" alt="Cascading Floral Wall" class="carousel-3d-img">
+          </div>
+        </div>
+
+        <!-- Next Navigation Arrow -->
+        <button class="carousel-3d-btn next" aria-label="Next Spotlight">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+        
+      </div>
+
+      <!-- Active Spotlight Card Info Details -->
+      <div class="spotlight-info">
+        <h3 class="spotlight-project-title">Imperial Wisteria Canopy</h3>
+        <p class="spotlight-project-location">Shangri-La Hotel, Colombo</p>
+      </div>
+
+      <!-- Spotlight Pagination Dots -->
+      <div class="spotlight-dots">
+        <span class="spotlight-dot active" data-index="0"></span>
+        <span class="spotlight-dot" data-index="1"></span>
+        <span class="spotlight-dot" data-index="2"></span>
+        <span class="spotlight-dot" data-index="3"></span>
+        <span class="spotlight-dot" data-index="4"></span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- --------------------------------------------------
+       3. Signature Wedding Gallery (Pinterest Masonry + Lightbox)
+  -------------------------------------------------- -->
+  <section id="gallery" class="gallery bg-cream">
+    <div class="container">
+      
+      <!-- Header titles centered -->
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <span class="section-subtitle">Modern Bridal Portfolio</span>
+        <h2 class="section-title">The Signature Galleries</h2>
+      </div>
+      
+      <!-- Masonry filter categories menu -->
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All Stories</button>
+        <button class="filter-btn" data-filter="destination">Destination Weddings</button>
+        <button class="filter-btn" data-filter="mandaps">Luxury Mandaps</button>
+        <button class="filter-btn" data-filter="reception">Reception Styling</button>
+        <button class="filter-btn" data-filter="bridal">Bridal Florals</button>
+        <button class="filter-btn" data-filter="table">Table Decor</button>
+      </div>
+      
+      <!-- Gallery Carousel Wrapper Container with side navigation arrows -->
+      <div class="gallery-carousel-container">
+        <!-- Gallery Prev Arrow -->
+        <button class="gallery-nav-btn prev" aria-label="Previous Gallery Image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+
+        <!-- Responsive masonry layout grid -->
+        <div class="gallery-grid">
+          
+          <!-- Gallery item 1: Destination -->
+          <div class="gallery-item" data-category="destination">
+            <div class="gallery-img-container">
+              <img src="assets/gallery_destination.png" alt="A dreamy clifftop destination wedding floral arch in Sri Lanka overlooking ocean" class="gallery-img">
+              <div class="gallery-overlay">
+                <span class="gallery-tag">Destination Weddings</span>
+                <h3 class="gallery-title">Clifftop Rose Garden</h3>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Gallery item 2: Mandap -->
+          <div class="gallery-item" data-category="mandaps">
+            <div class="gallery-img-container">
+              <img src="assets/gallery_mandap.png" alt="Luxury wedding mandap overflowing with white wisteria and crystal chandeliers" class="gallery-img">
+              <div class="gallery-overlay">
+                <span class="gallery-tag">Luxury Mandaps</span>
+                <h3 class="gallery-title">Imperial Wisteria Canopy</h3>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Gallery item 3: Reception -->
+          <div class="gallery-item" data-category="reception">
+            <div class="gallery-img-container">
+              <img src="assets/gallery_reception.png" alt="Bespoke wedding reception layout with towering blush rose arches and warm candle lights" class="gallery-img">
+              <div class="gallery-overlay">
+                <span class="gallery-tag">Reception Styling</span>
+                <h3 class="gallery-title">Candelabra Ballroom Symphony</h3>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Gallery item 4: Bridal -->
+          <div class="gallery-item" data-category="bridal">
+            <div class="gallery-img-container">
+              <img src="assets/gallery_bouquets.png" alt="Editorial close-up of a premium bridal bouquet of white calla lilies and garden roses" class="gallery-img">
+              <div class="gallery-overlay">
+                <span class="gallery-tag">Bridal Florals</span>
+                <h3 class="gallery-title">Minimalist Lily Cascade</h3>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Gallery item 5: Table Decor -->
+          <div class="gallery-item" data-category="table">
+            <div class="gallery-img-container">
+              <img src="assets/gallery_table.png" alt="High-end tablescape featuring sage linen napkins and gold brushed tableware" class="gallery-img">
+              <div class="gallery-overlay">
+                <span class="gallery-tag">Table Decor</span>
+                <h3 class="gallery-title">Sage & Ivory Tablescape</h3>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- Gallery Next Arrow -->
+        <button class="gallery-nav-btn next" aria-label="Next Gallery Image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- --------------------------------------------------
+       4. Services Section (Glassmorphism Cards with Glowing Borders)
+  -------------------------------------------------- -->
+  <section id="services" class="services">
+    <div class="container">
+      
+      <!-- Header titles centered -->
+      <div style="text-align: center; margin-bottom: 5rem;">
+        <span class="section-subtitle">Our Capabilities</span>
+        <h2 class="section-title">Bespoke Styling Offerings</h2>
+      </div>
+      
+      <!-- Staggered services cards grid -->
+      <div class="services-grid">
+        
+        <!-- Card 1 -->
+        <div class="service-card">
+          <div class="service-num">01</div>
+          <h3 class="service-name">Floral Wedding Decor</h3>
+          <p class="service-desc">
+            Grand scale, architectural wedding stage installations, aisle pathways lined with floating botanicals, and customized floral wall setups designed around curated color profiles.
+          </p>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="service-card">
+          <div class="service-num">02</div>
+          <h3 class="service-name">Destination Styling</h3>
+          <p class="service-desc">
+            Seamless design blueprint planning and structural execution across major resorts worldwide. We handle complex cargo operations, vendor logistics, and botanical sourcing.
+          </p>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="service-card">
+          <div class="service-num">03</div>
+          <h3 class="service-name">Venue Transformation</h3>
+          <p class="service-desc">
+            Metamorphosing plain spaces, rustic gardens, and modern ballrooms into custom romantic garden cathedrals using fine sheer drapery, high-end production rigging, and candles.
+          </p>
+        </div>
+        
+        <!-- Card 4 -->
+        <div class="service-card">
+          <div class="service-num">04</div>
+          <h3 class="service-name">Luxury Reception Design</h3>
+          <p class="service-desc">
+            Opulent mirror-topped banquet tablescapes, towering custom glass candelabras, handwritten calligraphy seatings, personalized napkins, and ambient dimmer lighting.
+          </p>
+        </div>
+        
+        <!-- Card 5 -->
+        <div class="service-card">
+          <div class="service-num">05</div>
+          <h3 class="service-name">Bridal Bouquets</h3>
+          <p class="service-desc">
+            Bespoke hand-tied floral arrangements utilizing premium local orchids and delicate imported roses bound in cascading raw organic silk ribbons matching your wedding gown.
+          </p>
+        </div>
+        
+        <!-- Card 6 -->
+        <div class="service-card">
+          <div class="service-num">06</div>
+          <h3 class="service-name">Stage & Aisle Design</h3>
+          <p class="service-desc">
+            Immersive wedding runways featuring high-gloss reflective walkways, delicate rows of rising calla lilies, and warm glowing tealight groupings extending to the horizon.
+          </p>
+        </div>
+        
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- --------------------------------------------------
+       5. Interactive Experience (Ambience Parallax / Decorative Layer)
+  -------------------------------------------------- -->
+  <section class="interactive bg-cream" style="padding: 10rem 0; overflow:hidden;">
+    <!-- Large architectural background text with custom speed drift -->
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: var(--font-serif); font-size: 16vw; color: rgba(197, 168, 128, 0.04); white-space: nowrap; pointer-events: none; z-index: 1; text-transform: uppercase; font-weight: 300;">
+      Frances Decor
+    </div>
+    
+    <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 800px;">
+      <span class="section-subtitle" style="letter-spacing: 0.4em;">Bespoke Luxury Experience</span>
+      <h2 class="font-serif" style="font-size: 2.8rem; font-weight: 300; line-height: 1.3; margin-bottom: 2rem;">
+        Are you planning a grand union or a private editorial wedding in Sri Lanka?
+      </h2>
+      <p style="color: var(--color-dark-muted); font-size: 0.95rem; line-height: 1.8; margin-bottom: 3.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        We limit our bookings to a selective number of clients per seasonal calendar to preserve absolute artistic detail and focus. Let us curate your botanical legacy together.
+      </p>
+      <a href="#contact" class="btn-luxury btn-luxury-primary">Request Invitation</a>
+    </div>
+  </section>
+
+  <!-- --------------------------------------------------
+       6. Testimonials (Auto-Sliding Ethereal Carousel)
+  -------------------------------------------------- -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      
+      <!-- Testimonials Slides Container -->
+      <div class="carousel-container">
+        
+        <!-- Slide 1 -->
+        <div class="carousel-slide active">
+          <span class="testimonial-quote-icon">“</span>
+          <p class="testimonial-quote">
+            "Frances and her team did the absolute impossible—they turned a blank hotel ballroom into a soft, glowing wisteria garden forest. Walking in literally took our breath away. It felt editorial, luxurious, and deeply emotional."
+          </p>
+          <div class="testimonial-author">
+            <img src="assets/couple1.png" alt="Happy couple Aria and Sean celebrating their luxury wedding designed by Frances Decor" class="author-img">
+            <div class="author-info">
+              <h4 class="author-name">Aria & Sean</h4>
+              <span class="author-location">Shangri-La Hotel, Colombo</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
+          <span class="testimonial-quote-icon">“</span>
+          <p class="testimonial-quote">
+            "The oceanfront clifftop installation was a work of fine art. The colossal rose arches framed our vows beautifully against the sea. Frances is incredibly professional, with a stunning, high-fashion aesthetic eye."
+          </p>
+          <div class="testimonial-author">
+            <img src="assets/couple2.png" alt="Testimonial couple Tahlia and Milan on ocean clifftop luxury wedding styling" class="author-img">
+            <div class="author-info">
+              <h4 class="author-name">Tahlia & Milan</h4>
+              <span class="author-location">Anantara Peace Haven, Tangalle</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="carousel-slide">
+          <span class="testimonial-quote-icon">“</span>
+          <p class="testimonial-quote">
+            "The micro-details were what completely set Frances Decor apart. The delicate candle placement, custom sage green linen settings, and hand-placed white orchids were flawless. It felt exactly like a high-fashion editorial shoot."
+          </p>
+          <div class="testimonial-author">
+            <img src="assets/couple3.png" alt="Testimonial couple Isabella and Christian at luxury reception" class="author-img">
+            <div class="author-info">
+              <h4 class="author-name">Isabella & Christian</h4>
+              <span class="author-location">Galle Fort Hotel, Galle</span>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- Slide controls buttons and indicators -->
+      <div class="carousel-controls">
+        <button class="control-btn prev" aria-label="Previous Testimonial">
+          <svg style="width:16px; height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        
+        <div class="carousel-indicators"></div>
+        
+        <button class="control-btn next" aria-label="Next Testimonial">
+          <svg style="width:16px; height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- --------------------------------------------------
+       7. Instagram Live Luxury Feed Integration
+  -------------------------------------------------- -->
+  <section id="instagram" class="instagram bg-cream">
+    <div class="container" style="position: relative;">
+      
+      <!-- Navigation Arrows -->
+      <button class="instagram-3d-btn prev" aria-label="Previous Reel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+        </svg>
+      </button>
+      <button class="instagram-3d-btn next" aria-label="Next Reel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+
+      <!-- Top header line with quick profile follow CTA -->
+      <div class="instagram-header">
+        <div>
+          <span class="section-subtitle">Visual Diaries</span>
+          <h2 class="section-title">Follow Our Artistry</h2>
+        </div>
+        <a href="https://www.instagram.com/francesdecor?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" class="instagram-btn">
+          <svg style="width: 18px; height: 18px; fill: currentColor;" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+          </svg>
+          @francesdecor
+        </a>
+      </div>
+      
+      <!-- Instagram visual cards grid (3D Curved Panoramic Carousel of Reels) -->
+      <div class="instagram-grid">
+        
+        <!-- Reel Card 1 -->
+        <div class="instagram-card" data-reel-id="DWq9nJTT74a" data-title="Breathtaking Destination Ceremony" data-caption="Opulent floral structure framing the cliffs of Anantara, Tangalle">
+          <div class="instagram-img-container">
+            <img src="assets/gallery_destination.png" alt="Breathtaking destination ceremony styling reel" class="instagram-img">
+            <div class="instagram-overlay">
+              <div class="play-btn-circle">
+                <svg viewBox="0 0 24 24" class="play-icon">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <span class="instagram-tag">Watch Reel</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Reel Card 2 -->
+        <div class="instagram-card" data-reel-id="DWn9ADjAQZ7" data-title="Imperial Mandap Masterpiece" data-caption="Thousands of cascading orchids draping in classical Indian harmony">
+          <div class="instagram-img-container">
+            <img src="assets/gallery_mandap.png" alt="Imperial mandap botanical arrangement reel" class="instagram-img">
+            <div class="instagram-overlay">
+              <div class="play-btn-circle">
+                <svg viewBox="0 0 24 24" class="play-icon">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <span class="instagram-tag">Watch Reel</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Reel Card 3 -->
+        <div class="instagram-card" data-reel-id="DWf9LUwD3kW" data-title="Ballroom Wisteria Forest" data-caption="Transforming a modern blank space into a magical candlelit paradise">
+          <div class="instagram-img-container">
+            <img src="assets/gallery_reception.png" alt="Opulent ballroom reception lighting and candelabras reel" class="instagram-img">
+            <div class="instagram-overlay">
+              <div class="play-btn-circle">
+                <svg viewBox="0 0 24 24" class="play-icon">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <span class="instagram-tag">Watch Reel</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Reel Card 4 -->
+        <div class="instagram-card" data-reel-id="DWF5crbDJ2U" data-title="Minimalist Tablescape Art" data-caption="Ivory plates, hand-woven sage silk ribbons, and custom calligraphy">
+          <div class="instagram-img-container">
+            <img src="assets/gallery_table.png" alt="Minimalist ivory tablescape styling reel" class="instagram-img">
+            <div class="instagram-overlay">
+              <div class="play-btn-circle">
+                <svg viewBox="0 0 24 24" class="play-icon">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <span class="instagram-tag">Watch Reel</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Reel Card 5 -->
+        <div class="instagram-card" data-reel-id="C-WupiDIZYy" data-title="Behind the Botanical Scenes" data-caption="Frances assembling the wisteria overhead drops at Shangri-La Colombo">
+          <div class="instagram-img-container">
+            <img src="assets/couple1.png" alt="Behind the scenes wedding design reel" class="instagram-img">
+            <div class="instagram-overlay">
+              <div class="play-btn-circle">
+                <svg viewBox="0 0 24 24" class="play-icon">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <span class="instagram-tag">Watch Reel</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Reel Card 6 -->
+        <div class="instagram-card" data-reel-id="C-rRwizo_Vz" data-title="Sensory Detail Story" data-caption="Slow breeze through custom wisteria garlands and custom scented candles">
+          <div class="instagram-img-container">
+            <img src="assets/couple3.png" alt="Sensory details and candlelight glow styling reel" class="instagram-img">
+            <div class="instagram-overlay">
+              <div class="play-btn-circle">
+                <svg viewBox="0 0 24 24" class="play-icon">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <span class="instagram-tag">Watch Reel</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Reel Card 7 -->
+        <div class="instagram-card" data-reel-id="DWq9nJTT74a" data-title="Grand Runway Entrance" data-caption="Walkway reflecting rows of candle jars and soft rising white calla lilies">
+          <div class="instagram-img-container">
+            <img src="assets/couple2.png" alt="Botanical runway and grand reception entrance reel" class="instagram-img">
+            <div class="instagram-overlay">
+              <div class="play-btn-circle">
+                <svg viewBox="0 0 24 24" class="play-icon">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <span class="instagram-tag">Watch Reel</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- --------------------------------------------------
+       8. Contact & Booking Form (WhatsApp, Address & Map)
+  -------------------------------------------------- -->
+  <section id="contact" class="contact">
+    <div class="container">
+      
+      <div class="contact-grid">
+        
+        <!-- Left Column: Details + Maps integration -->
+        <div class="contact-info">
+          <div>
+            <span class="section-subtitle">Reserve the Date</span>
+            <h2 class="section-title">Begin Your Floral Story</h2>
+            
+            <div class="contact-details">
+              <!-- Item 1: Address -->
+              <div class="contact-item">
+                <h4 class="contact-item-title">Malabe Atelier</h4>
+                <p class="contact-item-content">
+                  Frances Decor,<br>
+                  142 Kaduwela Road, Malabe,<br>
+                  Sri Lanka.
+                </p>
+              </div>
+              
+              <!-- Item 2: Phone / Contact info -->
+              <div class="contact-item">
+                <h4 class="contact-item-title">Telephone & Consultations</h4>
+                <p class="contact-item-content">+94 77 712 3456</p>
+              </div>
+              
+              <!-- Item 3: Email -->
+              <div class="contact-item">
+                <h4 class="contact-item-title">Press & Inquiries</h4>
+                <p class="contact-item-content">design@francesdecor.com</p>
+              </div>
+            </div>
+            
+            <!-- Social profile connections -->
+            <div class="contact-socials">
+              <a href="https://www.instagram.com/francesdecor?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Frances Decor Instagram">
+                <svg style="width:16px; height:16px; fill:currentColor;" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/share/1Fu2a14YKj/?mibextid=wwXIfr&utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Frances Decor Facebook">
+                <svg style="width:16px; height:16px; fill:currentColor;" viewBox="0 0 24 24">
+                  <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Column: Booking Inquiry Form -->
+        <div class="contact-form-container">
+          <form id="luxury-booking-form" class="contact-form">
+            
+            <!-- Name Input -->
+            <div class="form-group">
+              <input type="text" id="client-name" class="form-input" placeholder=" " required autocomplete="name">
+              <label for="client-name" class="form-label">Full Name</label>
+            </div>
+            
+            <!-- Date Input -->
+            <div class="form-group">
+              <input type="date" id="wedding-date" class="form-input" placeholder=" " required>
+              <label for="wedding-date" class="form-label" style="top:-1.2rem; font-size:0.7rem;">Wedding Date</label>
+            </div>
+            
+            <!-- Venue Input -->
+            <div class="form-group">
+              <input type="text" id="wedding-venue" class="form-input" placeholder=" " required>
+              <label for="wedding-venue" class="form-label">Proposed Venue</label>
+            </div>
+            
+            <!-- Vision Description Textarea -->
+            <div class="form-group">
+              <textarea id="wedding-vision" class="form-input" placeholder=" " rows="4" style="resize: none;"></textarea>
+              <label for="wedding-vision" class="form-label">Your Theme / Vision</label>
+            </div>
+            
+            <div class="form-btn-container">
+              <!-- Custom booking submit -->
+              <button type="submit" class="btn-luxury btn-form-submit">Send Inquiry</button>
+              
+              <!-- Direct WhatsApp redirect CTA -->
+              <button type="button" class="btn-luxury btn-whatsapp-direct">
+                <svg style="width: 18px; height: 18px; fill: white;" viewBox="0 0 24 24">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.517 2.266 2.27 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.97-1.861-1.868-4.339-2.895-6.97-2.896-5.44 0-9.866 4.372-9.87 9.802 0 1.698.459 3.356 1.33 4.797L1.811 20.3l4.836-1.146zm11.287-6.559c-.302-.15-.179-.25-.37-.48-.093-.125-1.919-2.693-2.003-2.802-.15-.2-.3-.3-.45-.3-.15 0-.3.05-.45.2-.15.15-1.056.901-1.358 1.202-.302.302-.603.351-.904.2-.302-.15-1.274-.469-2.427-1.498-.897-.8-1.502-1.787-1.678-2.088-.176-.302-.019-.465.132-.615.136-.135.302-.351.452-.526.15-.175.2-.3.302-.5.101-.2.05-.376-.026-.526-.076-.15-.753-1.813-1.031-2.483-.271-.652-.542-.563-.743-.574-.199-.011-.428-.013-.655-.013-.226 0-.594.084-.904.425-.31.341-1.18 1.152-1.18 2.81 0 1.657 1.206 3.257 1.37 3.483.165.226 2.37 3.614 5.74 5.067.802.345 1.428.552 1.917.708.805.256 1.538.22 2.118.134.646-.096 1.919-.785 2.186-1.543.266-.758.266-1.403.186-1.543-.076-.14-.287-.23-.589-.38z"/>
+                </svg>
+                WhatsApp Us
+              </button>
+            </div>
+            
+          </form>
+        </div>
+        
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- --------------------------------------------------
+       Fullscreen Image Lightbox Overlay
+  -------------------------------------------------- -->
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Fullscreen Gallery Viewer">
+    <button class="lightbox-close" aria-label="Close Lightbox">&times;</button>
+    <div class="lightbox-content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
+      <img src="assets/gallery_destination.png" alt="" class="lightbox-img">
+      <div class="lightbox-video-container" style="display: none; width: 100%; max-width: 380px; height: 580px; border-radius: 12px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.5); background: #000; position: relative; margin: 0 auto;">
+        <iframe class="lightbox-iframe" style="width: 100%; height: 100%; border: none;" src="" allowtransparency="true" allowfullscreen="true" scrolling="no"></iframe>
+      </div>
+    </div>
+    <div class="lightbox-caption"></div>
+  </div>
+
+  <!-- --------------------------------------------------
+       Form Success Floating Toast Popup
+  -------------------------------------------------- -->
+  <div class="form-success-toast" role="alert">
+    <svg style="width: 28px; height: 28px; color: var(--color-gold); flex-shrink: 0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+    </svg>
+    <div>
+      <h5 class="form-success-toast-title">Thank You</h5>
+      <p class="form-success-toast-desc">Your invitation request has been safely received.</p>
+    </div>
+  </div>
+
+  <!-- --------------------------------------------------
+       Google Map Location Malabe (Full-Width Row)
+  -------------------------------------------------- -->
+  <div class="fullwidth-map">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.916817290074!2d79.95299496660604!3d6.905623067341398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae256db1a677115%3A0x2c6d0d057a3fc76d!2sMalabe%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1653216891253!5m2!1sen!2sus" 
+      width="100%" 
+      height="100%" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Frances Decor Atelier Map Location Malabe">
+    </iframe>
+  </div>
+
+  <!-- --------------------------------------------------
+       Footer (Minimalist Gold-Toned Dark Palette)
+  -------------------------------------------------- -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <div class="logo">
+            FRANCES DECOR
+            <span>Bespoke Floral Architecture</span>
+          </div>
+          <p class="footer-desc">
+            Colombo’s premier creative boutique crafting luxury destination weddings and majestic architectural floral settings.
+          </p>
+        </div>
+        
+        <!-- Navigation Column links -->
+        <div>
+          <h4 class="footer-links-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Love Stories</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Social connection listing -->
+        <div>
+          <h4 class="footer-links-title">Connect</h4>
+          <ul class="footer-links-list">
+            <li><a href="https://www.instagram.com/francesdecor?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.facebook.com/share/1Fu2a14YKj/?mibextid=wwXIfr&utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://wa.me/94777123456" target="_blank" rel="noopener noreferrer">WhatsApp Direct</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Footer Copyright Bottom credits -->
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Frances Decor. All Rights Reserved. Crafted with luxury.</p>
+        <p class="copyright" style="font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;">Barnes Place, Colombo</p>
+      </div>
+      
+    </div>
+  </footer>
+
+  <!-- --------------------------------------------------
+       Libraries & Custom Logic Scripts (CDNs)
+  -------------------------------------------------- -->
+  <!-- GSAP Animation Engine Core -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- GSAP ScrollTrigger plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Lenis Custom Smooth Momentum Scroll -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="js/petals.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
